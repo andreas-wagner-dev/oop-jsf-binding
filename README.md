@@ -11,11 +11,9 @@ The application can be started as a *WAR* on a Jakarta EE compliant server (e.g.
 
 1. Navigate in the root project folder and run in cmd:
 
-``mvn package`` - for standalone app as **.jar** <br/>
+``mvn package`` - for standalone app as **.jar** or ``mvn initialize`` - for server deployment as **.war** 
 
 2. Open the browser and navigate to: [http://localhost:8080/index.xhtml](http://localhost:8080/index.xhtml)
-
-``mvn initialize`` - for server deployment as **.war** <br/>
 
 ## **Architecture and OOP Principles**
 

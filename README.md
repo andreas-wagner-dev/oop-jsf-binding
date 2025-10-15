@@ -2,7 +2,20 @@
 
 ## Überblick
 
-Dieses Projekt ist eine Beispielanwendung zur Demonstration von objektorientierten Prinzipien (OOP) in einer Java-Webanwendung mit Jakarta EE und PrimeFaces. Die Anwendung verwaltet Aufgaben (`Task`) und Ordner (`Folder`) in einer hierarchischen Struktur und zeigt, wie UI-Komponenten direkt an die Domänenobjekte gebunden werden können.
+Dieses Projekt ist eine Beispielanwendung zur Demonstration von objektorientierten Prinzipien (OOP) in einer Java-Webanwendung mit Jakarta EE und PrimeFaces. 
+- Die Anwendung verwaltet Aufgaben (`Task`) und Ordner (`Folder`) in einer hierarchischen Struktur und zeigt, wie UI-Komponenten direkt an die Domänenobjekte gebunden werden können.
+
+## Schnell Start
+
+run MAVEN commands in the root folder of the Java project:
+
+- for server deployment as .war <br/>
+``mvn initialize``
+
+- for standalone app as .jar <br/>
+``mvn pakage``
+
+Die Anwendung kann als WAR in einem Jakarta EE-kompatiblen Server (z.B. WildFly, Payara) oder lokal mit einer H2-In-Memory-Datenbank gestartet werden.
 
 ## Architektur und OOP-Prinzipien
 
@@ -22,11 +35,10 @@ Die Anwendung folgt den klassischen OOP-Prinzipien:
 
 ## UI-Binding
 
-Die Anwendung zeigt, wie JSF-Komponenten über das `binding`-Attribut direkt mit den Methoden der Domänenobjekte verbunden werden können. Beispiel: Die Methode `displayTo(HtmlOutputText output)` im Task-Objekt setzt die Darstellung direkt auf das UI-Element.
+Die Anwendung zeigt, wie JSF-Komponenten über das `binding`-Attribut direkt mit den Methoden der Domänenobjekte verbunden werden können. 
+- **Beispiel:** Die Methode `displayTo(HtmlOutputText output)` im Task-Objekt setzt die Darstellung direkt auf das UI-Element.
 
-## Starten
 
-Die Anwendung kann als WAR in einem Jakarta EE-kompatiblen Server (z.B. WildFly, Payara) oder lokal mit einer H2-In-Memory-Datenbank gestartet werden.
 
 ## Beispielhafte OOP-Implementierung
 

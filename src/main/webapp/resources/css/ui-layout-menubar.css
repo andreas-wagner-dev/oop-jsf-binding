@@ -1,0 +1,131 @@
+div.layout-content-container .ui-menu.ui-menubar {
+    padding: 0;
+    background: transparent;
+    border-radius: 0px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.main-menubar-left.ui-menu {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0px;
+  background-color: var(--surface-ground);
+}
+
+
+.main-menubar-left.ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link .ui-menuitem-icon
+	{
+	margin-right: .25rem;
+	vertical-align: middle;
+	float: none;
+	/* color: var(--primary-color-text); */
+	font-size: 1.25rem;
+}
+
+.main-menubar-left.ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link {
+   /*  position: static; */
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: .75rem 1rem;
+  padding-left: .65rem;
+}
+
+.main-menubar-left.ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link .ui-menuitem-icon
+	{
+	font-size: 1.25rem;
+}
+
+.main-menubar-left.ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link .ui-icon-triangle-1-e:last-child,
+	.ui-menu .ui-menu-list .ui-menuitem.ui-menuitem-active>.ui-menuitem-link.ui-state-hover>.ui-icon-triangle-1-e:last-child
+	{
+	display: none !important;
+}
+
+.main-menubar-left.ui-menu .ui-menu-list .ui-menuitem.ui-menuitem-active>.ui-menuitem-link.ui-state-hover>.ui-icon-triangle-1-e:last-child
+	{
+	display: block !important;
+}
+
+.main-menubar-left.ui-menu .ui-menu-list .ui-menuitem.ui-menuitem-active>.ui-menuitem-link.ui-state-hover>.ui-icon-triangle-1-e:last-child
+	{
+	z-index: 2046;
+	margin-top: 0px;
+	/* color: #fff; */
+	background: var(--primary-color);
+	border: 1px solid var(--primary-color);
+	border-radius: 9px;
+	margin-left: auto;
+}
+
+.layout-wrapper .layout-leftbar.leftbar-close .main-menubar-left.ui-menu .ui-menu-list .root-menu.ui-menuitem.ui-menuitem-active>.ui-menuitem-link.ui-state-hover>.ui-icon-triangle-1-e:last-child,
+.layout-wrapper .layout-leftbar.leftbar-close-animation .main-menubar-left.ui-menu .ui-menu-list .root-menu.ui-menuitem.ui-menuitem-active>.ui-menuitem-link.ui-state-hover>.ui-icon-triangle-1-e:last-child {
+    margin-left: -5px;
+}
+.layout-wrapper .layout-leftbar .main-menubar-left.ui-menu .ui-menu-list .root-menu.ui-menuitem.ui-menuitem-active>.ui-menuitem-link.ui-state-hover>.ui-icon-triangle-1-e:last-child {
+   margin-left: auto;
+}
+
+
+.main-menubar-left.ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link .ui-menuitem-text {
+    float: none;
+    vertical-align: middle;
+    /* color: #495057; */
+    font-size: 0.85rem;
+    margin-left: 5px;
+    
+   /*  .line-clamp */
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
+
+.layout-wrapper .layout-leftbar.leftbar-open-animation .main-menubar-left .ui-menu-list > .root-menu.ui-menuitem  > .ui-menuitem-link .ui-menuitem-text,
+.layout-wrapper .layout-leftbar.leftbar-open-animation .main-menubar-left .ui-menu-list .ui-menuitem .root-menu.ui-menuitem-link  > .ui-menuitem-text   {
+  	animation-name: lb-w-o-open;
+	animation-duration: 2.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes lb-w-o-open {
+from {	opacity: 0;}
+to {	opacity: 1;}
+}
+
+@keyframes lb-w-o-close {
+from {	opacity: 1;}
+to {	opacity: 0; }
+}
+
+body .ui-menu .ui-menu-list .ui-menu-child {
+	/* background-image: url("#{resource['images/bg-911-sport-track-road.jpg']}"); */
+    padding: 0;
+} 
+
+body .ui-menu .ui-menu-list .ui-menuitem.ui-menuitem-active>.ui-menuitem-link {
+    /* background: #2196f314; */
+    border-radius: 4px;
+}
+
+body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link.ui-state-hover {
+    /* background: #2196f314; */
+    border-radius: 4px;
+}
+
+
+
+/* a.root-menu  {
+	padding-left: 0.625rem !important;
+}
+
+a.root-menu span.ui-icon {
+	margin-left: -5px;
+}
+
+li.root-menu a span.ui-icon-triangle-1-e {
+	margin-left: -5px;
+} */

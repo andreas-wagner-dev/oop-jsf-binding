@@ -1,0 +1,26 @@
+
+
+body .ui-dialog .ui-dialog-titlebar {
+    font-weight: 700;
+    padding: .5rem;
+    border-bottom: 1px solid var(--surface-border);
+    color: var(--text-color);
+    background: var(--surface-card);
+}
+
+
+body .ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+    margin: 0;
+    margin-left: 15px;
+    float: none;
+    font-size: 1.25rem;
+}
+
+body .ui-dialog .ui-dialog-footer {
+    border-top: 1px solid var(--surface-border);
+    background: var(--state-hover-color);
+    color: var(--text-color);
+    padding: .5rem .5rem .5rem .5rem;
+    margin: 0;
+    text-align: right;
+}

@@ -1,0 +1,346 @@
+:root {
+	/* layout */
+	/* ====== */
+	/* top bar */
+	--tb-t: 0px;
+	--tb-b: 34.18px;
+	--tb-h: 34.18px;
+	--tb-w: 100%;
+	--bm-h: 34.18px;
+	--bm-w: 50px;
+	/* left bar */
+	--lb-h: 100%;
+	--lb-w-open: 160px;
+	--lb-w-close: 50px;
+	--lb-w-none: 0px;
+	/* right bar*/
+	--rb-h: 100%;
+	--rb-w-open: 180px;
+	--rb-w-close: 0px;
+	/* middle bar content */
+	--mb-h: 100%;
+	--mb-w: 100%;
+	--mb-ml-open: 160px;
+	--mb-ml-close: 50px;
+	--mb-mr-open: 180px;
+	--mb-mr-close: 0px;
+		/* right config bar*/
+	--rcb-h: 100%;
+	--rcb-r-close: 0px;
+	--rcb-r-close: 180px;
+	--rcb-w-open: 50%;
+	--rcb-w-close: 0%;	/* ====== */
+	/* colors */
+	/* ====== */
+	/* --primary-color: #0061d9; */
+/*	--primary-color: #2196F3; */
+/* 	--primary-color: rgb(255, 0, 128);
+	--bg-color: #007ad9;
+	--bg-color-hover: #2196F3; */
+    --scrollbar-width: 0px;
+}
+
+/* Limit text length to n lines using CSS */
+.line-clamp {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
+
+
+.content {
+	opacity: 0;
+	animation-name: shownum;
+	animation-duration: 2s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+	background-color: transparent;
+}
+
+
+
+/**
+	    LAYOUT  
+	 ___________
+	|____TB_____|
+	|  |     |  |
+  |LB|  MB |RB|
+  |__|     |__|
+
+*/
+
+body {
+	font-family: "Lato", "Helvetica Neue", sans-serif;
+	font-size: 0.9rem;
+	color: var(--primary-color);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%; 
+	/* 	background-color: #eaeff2; */
+}
+
+body .ui-widget {
+	font-family: "Lato", "Helvetica Neue", sans-serif;
+	font-size: 0.9rem;
+	text-decoration: none;
+}
+
+.layout-topbar {
+	/*layout*/
+	z-index: 102;
+	position: fixed;
+	top: 0px;
+	height: var(--tb-h);
+	width: var(--tb-w);
+	
+	background: var(--primary-color);
+	
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+}
+
+.layout-wrapper .layout-topbar .layout-main-menu-button {
+	float: left;
+}
+
+.layout-wrapper .layout-topbar .layout-main-menu-button .main-menu-button
+	{
+	height: var(--bm-h);
+	width: var(--bm-w); 
+	margin-left: 0px;
+	border: none !important;
+	border-radius: 0px !important;
+}
+
+
+
+
+.layout-topbar .layout-sidebar-button-right {
+	float: right;
+}
+
+.layout-wrapper .layout-leftbar {
+	display: block;
+	position: fixed;
+	z-index: 101;
+	top: var(--tb-b);
+	height: 100%;
+	width: auto;
+	
+	/* background-image: url("#{resource['images/bg-911-sport-track.jpg']}");
+	background-size: cover;
+	background-repeat: no-repeat;  */
+	
+	background: var(--surface-card);
+	box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.32);
+}
+
+.layout-wrapper .layout-leftbar .main-menubar-left {
+	width: var(--lb-w-close);
+	/* background:transparent; */
+}
+
+.layout-wrapper .layout-leftbar.leftbar-open,
+ .layout-wrapper .layout-leftbar.leftbar-open .main-menubar-left {
+	width: var(--lb-w-open);
+}
+
+.layout-wrapper .layout-leftbar.leftbar-close,
+ .layout-wrapper .layout-leftbar.leftbar-close .main-menubar-left {
+	width: var(--lb-w-close);
+}
+
+.layout-wrapper .layout-leftbar.leftbar-open-animation,
+ .layout-wrapper .layout-leftbar.leftbar-open-animation .main-menubar-left {
+	width: var(--lb-w-open);
+	animation-name: mb-w-open;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+.layout-wrapper .layout-leftbar.leftbar-close-animation,
+ .layout-wrapper .layout-leftbar.leftbar-close-animation .main-menubar-left  {
+	width: var(--lb-w-close);
+	animation-name: mb-w-close;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes mb-w-open {
+from {width: var(--lb-w-close);}
+to {width: var(--lb-w-open);}
+}
+
+@keyframes mb-w-close {
+from {width: var(--lb-w-open);}
+to {width: var(--lb-w-close);}
+}
+
+.layout-content {
+	padding-top: var(--tb-t);
+
+    /* background-image: url("#{resource['images/bg-911-sport-track-nbg.png']}"); */
+	/* background-image: url("#{resource['images/bg-911-sport-track-nbg.png']}"); */
+
+	background-size: cover;
+	background-repeat: no-repeat; 
+}
+
+.layout-content-container {
+
+    height: calc(100vh - var(--tb-b));
+    overflow-x: hidden;
+  
+    display: grid;
+    align-content: stretch;
+  
+    background-color: transparent;
+  	
+    animation-name: shownum;
+    animation-duration: 2s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+
+    box-shadow: inset 1px 4px 20px 6px rgba(0, 0, 0, 0.32);
+}
+
+@keyframes shownum {
+/*   from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  } */
+  0%   { opacity: 0.0; transform: translateX(-100%);}
+  12.5%  { opacity: 0.0; transform: translateX(-75%);}
+  25%  { opacity: 0.0; transform: translateX(-50%);}
+  37.5%  { opacity: 0.0; transform: translateX(-25%);}
+  50% { opacity: 0.1; transform: translateX(0);}
+  62.5%   { opacity: 0.4; transform: translateX(0);}
+  75%  { opacity: 0.75; transform: translateX(0);}
+  87.5%  { opacity: 0.9; transform: translateX(0);}
+  100% { opacity: 1; transform: translateX(0);}
+}
+
+.layout-content.leftbar-open {
+	margin-left: var(--mb-ml-open);
+}
+
+.layout-content.leftbar-close {
+	margin-left: var(--mb-ml-close);
+}
+
+.layout-content.leftbar-open-animation {
+	margin-left: var(--mb-ml-open);
+	animation-name: lb-ml-open;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+.layout-content.leftbar-close-animation {
+	margin-left: var(--mb-ml-close);
+	animation-name: lb-ml-close;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes lb-ml-open {
+from { margin-left: var(--mb-ml-close);}
+to {margin-left: var(--mb-ml-open);}
+}
+
+@keyframes lb-ml-close {
+from { margin-left: var(--mb-ml-open);}
+to {margin-left: var(--mb-ml-close);}
+}
+
+.layout-content.rightbar-open {
+	margin-right: var(--mb-mr-open);
+}
+
+.layout-content.rightbar-close {
+	margin-right: var(--mb-mr-close);
+}
+
+.layout-content.rightbar-open-animation {
+	margin-right: var(--mb-mr-open);
+	animation-name: rb-mr-open;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+.layout-content.rightbar-close-animation {
+	margin-right: var(--mb-mr-close);
+	animation-name: rb-mr-close;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes rb-mr-open {
+from {margin-right: var(--mb-mr-close); }
+to {margin-right: var(--mb-mr-open);}
+}
+
+@keyframes rb-mr-close {
+from {margin-right: var(--mb-mr-open);}
+to {margin-right: var(--mb-mr-close);}
+}
+
+
+.layout-wrapper .layout-rightbar {
+	display: block;
+	position: fixed;
+	z-index: 101;
+	top: var(--tb-b);
+	right: 0px;
+	height: 100%;
+	width: var(--rb-w-close);
+	
+/*   box-shadow: inset 4px 4px 4px 0px rgba(0, 0, 0, 0.32); */
+	box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.32);
+	
+	background: var(--surface-card); 
+	
+	/* background-image: url("#{resource['images/bg-911-sport-track.jpg']}");
+	background-size: cover;
+	background-repeat: no-repeat;  */
+	
+}
+
+.layout-wrapper .layout-rightbar.rightbar-open {
+	width: var(--rb-w-open);
+}
+
+.layout-wrapper .layout-rightbar.rightbar-close {
+	width: var(--rb-w-close);
+}
+
+.layout-wrapper .layout-rightbar.rightbar-open-animation {
+	width: var(--rb-w-open);
+	animation-name: rb-w-open;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+.layout-wrapper .layout-rightbar.rightbar-close-animation {
+	width: var(--rb-w-close);
+	animation-name: rb-w-close;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes rb-w-open {
+from {width: var(--rb-w-close);}
+to {width: var(--rb-w-open);}
+}
+
+@keyframes rb-w-close {
+from {width: var(--rb-w-open);}
+to {width: var(--rb-w-close);}
+}
+

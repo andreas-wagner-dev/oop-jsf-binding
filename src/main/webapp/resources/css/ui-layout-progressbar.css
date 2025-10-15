@@ -1,0 +1,115 @@
+#downloadDialog {
+	z-index: 997 !important;
+	top: auto !important;
+	left: auto !important;
+	bottom: 0px !important;
+	margin-left: 0px !important;
+	padding-right: 0px !important;
+	width: 100%;
+}
+
+#downloadDialog_content {
+	margin: 0px;
+	padding: 0px;
+	background-color: white !important;
+	overflow: hidden;
+	border: none;
+}
+
+#statusDialog {
+	z-index: 997 !important;
+	top: auto !important;
+	left: auto !important;
+	bottom: 0px !important;
+	margin-left: 0px !important;
+	padding-right: 0px !important;
+	height: 30px !important;
+	width: 100%;
+	opacity: 0.8;
+	border: none;
+	box-shadow: none !important;
+	background: transparent !important;
+}
+
+#statusDialog_content {
+	margin: 0px;
+	padding: 0px;
+	background: transparent !important;
+	overflow: hidden;
+	border: none;
+}
+
+.ui-selectonemenu-panel {
+	z-index: 9999 !important;
+}
+
+body .ui-progressbar {
+	border: 0 none;
+	/*     height: 1rem; */
+	border-radius: 3px;
+	background: transparent !important;
+}
+
+body .ui-progressbar .ui-progressbar-label {
+	margin-top: 10px;
+	color: black;
+	display: block !important;
+	width: 100%;
+	text-align: center;
+	background: transparent !important;
+}
+
+body .ui-progressbar .ui-progressbar-value {
+	border: 0 none;
+	margin: 0;
+	border-radius: 3px;
+	background-color: white;
+	background: transparent !important;
+}
+
+@media ( max-width : 1024px) {
+	#statusDialog {
+		margin-left: 0px !important;
+		padding-right: 0px !important;
+	}
+}
+
+@media ( max-width : 1024px) {
+	#downloadDialog {
+		margin-left: 0px !important;
+		padding-right: 0px !important;
+	}
+}
+
+body .ui-widget-overlay {
+	background: #00000000;
+}
+
+body .ui-progressbar .ui-progressbar-value {
+	border: 0 none;
+	margin: 0;
+	border-radius: 3px;
+	background-color: transparent;
+}
+
+.ui-progressbar-indeterminate .ui-progressbar-value::before {
+	background-image: url("#{resource['images/911-mail-right-tr.png']}")
+		!important;
+	background-repeat: no-repeat;
+}
+
+.ui-progressbar-indeterminate .ui-progressbar-value::after {
+	background-image: url("#{resource['images/911-mail-right-tr.png']}")
+		!important;
+	background-repeat: no-repeat;
+}
+
+.cancel-progressbar-button {
+	height: 30px;
+	z-index: 9999;
+	position: fixed;
+    bottom: 0px !important;
+	right: 0px;
+	background-color: transparent;
+	border: none;
+}

@@ -1,0 +1,418 @@
+:root {
+	/* layout */
+	/* ====== */
+	/* top bar  */
+	--tb-t: 0px;
+	--tb-b: 2.5rem; /* 35px  */
+	--tb-h: 2.5rem;
+	--tb-w: 100%;
+	--bm-h: 2.5rem;
+	--bm-w: 50px;
+	/* left bar */
+	--lb-h: 100%;
+	--lb-w-open: 130px;
+	--lb-w-close: 40px;
+	--lb-w-none: 0px;
+	/* middle bar content */
+	--mb-h: 100%;
+	--mb-w: 100%;
+	--mb-ml-open: 130px;
+	--mb-ml-close: 40px;
+	--mb-mr-open: 180px;
+	--mb-mr-close: 0px;
+	/* right bar*/
+	--rb-h: 100%;
+	--rb-w-open: 180px;
+	--rb-w-close: 0px;
+	/* right config bar */
+	--rcb-h: 100%;
+	--rcb-r-close: 0px;
+	--rcb-r-close: 180px;
+	--rcb-w-open: 50%;
+	--rcb-w-close: 0%;	/* ====== */
+	/* colors */
+	/* ====== */
+	/* --primary-color: #0061d9; */
+/*	--primary-color: #2196F3; */
+/* 	--primary-color: rgb(255, 0, 128);
+	--bg-color: #007ad9;
+	--bg-color-hover: #2196F3; */
+    --scrollbar-width: 0px;
+}
+
+/* Limit text length to n lines using CSS */
+.line-clamp {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
+
+
+.content {
+	opacity: 0;
+	animation-name: shownum;
+	animation-duration: 2s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+	background-color: transparent;
+}
+
+
+
+/**
+	LAYOUT 
+ ___________ 
+|____TB_____|
+|____BC_____|
+|  |     |  |
+|LB|  MB |RB|
+|__|     |__|
+
+*/
+
+html {
+  height: 100%;
+  font-size: 14px;
+}
+
+/* Main Layout */
+    
+body {
+	font-family: "Lato", "Helvetica Neue", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    /*  */
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+	/*  */
+    overflow-y:hidden;
+    /**/
+    color: var(--text-color);
+    /*  */
+    background-color: var(--surface-ground);
+    /*  */
+    background-image: url("#{resource['image/bg-911-sport-track-nbg.png']}");
+    background-size: 100%;
+    background-repeat: repeat-y;
+    background-position-y: top;
+    
+
+}
+
+body .ui-widget {
+	font-family: "Lato", "Helvetica Neue", sans-serif;
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+.layout-topbar {
+	/*layout*/
+	z-index: 102;
+	position: fixed;
+	top: 0px;
+	height: var(--tb-h);
+	width: var(--tb-w);
+	
+	background: var(--primary-color);
+	
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+}
+
+
+.layout-topbar .layout-sidebar-button-right {
+/*     position: absolute;
+    right: 0px;
+    top: 0px;
+    height: var(--tb-h);
+    display: flex;
+    align-items: center; */
+    float: right;
+}
+
+.layout-wrapper .layout-topbar .layout-main-menu-button {
+	float: left;
+}
+
+.layout-wrapper .layout-topbar .layout-main-menu-button .main-menu-button
+	{
+	line-height: 2rem;
+	width: var(--tb-h);
+	border: none !important;
+	border-radius: 0px !important;
+	background: var(--primary-color);
+	color: var(--primary-color-text);
+	box-shadow:none;
+}
+
+.main-menu-button.ui-button .ui-icon {
+    font-size: 1.5rem;
+    margin-top: -.95rem !important;
+    margin-left: -0.6rem !important;
+}
+
+.main-menu-button.ui-button span{
+    margin-left: 5px;
+}
+
+.layout-topbar .layout-sidebar-button-right {
+	float: right;
+	height: var(--tb-h);
+    line-height: var(--tb-h);
+}
+
+.layout-wrapper .layout-leftbar {
+	display: block;
+	position: fixed;
+	z-index: 101;
+	top: var(--tb-b);
+	height: 100%;
+	width: auto;
+	background: transparent;
+	box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.32);
+}
+
+.layout-wrapper .layout-leftbar .main-menubar-left {
+	width: var(--lb-w-close);
+	/* background:transparent; */
+}
+
+.layout-wrapper .layout-leftbar.leftbar-open,
+ .layout-wrapper .layout-leftbar.leftbar-open .main-menubar-left {
+	width: var(--lb-w-open);
+}
+
+.layout-wrapper .layout-leftbar.leftbar-close,
+ .layout-wrapper .layout-leftbar.leftbar-close .main-menubar-left {
+	width: var(--lb-w-close);
+}
+
+.layout-wrapper .layout-leftbar.leftbar-open-animation,
+ .layout-wrapper .layout-leftbar.leftbar-open-animation .main-menubar-left {
+	width: var(--lb-w-open);
+	animation-name: mb-w-open;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+.layout-wrapper .layout-leftbar.leftbar-close-animation,
+ .layout-wrapper .layout-leftbar.leftbar-close-animation .main-menubar-left  {
+	width: var(--lb-w-close);
+	animation-name: mb-w-close;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes mb-w-open {
+from {width: var(--lb-w-close);}
+to {width: var(--lb-w-open);}
+}
+
+@keyframes mb-w-close {
+from {width: var(--lb-w-open);}
+to {width: var(--lb-w-close);}
+}
+
+.layout-breadcrumb {
+	
+}
+
+
+.layout-content {
+/* 	padding-top: var(--tb-b);
+    min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	display: -ms-flexbox;
+	-ms-flex-direction: column;
+	-ms-flex-pack: justify; */
+	padding-top: var(--tb-b);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+
+    /* background-image: url("#{resource['images/bg-911-sport-track-nbg.png']}"); */
+	/* background-image: url("#{resource['images/bg-911-sport-track-nbg.png']}"); */
+
+	background-size: cover;
+	background-repeat: no-repeat; 
+}
+
+.layout-breadcrumb-container {
+	background-color: transparent;
+}
+
+.layout-breadcrumb-buttons .ui-button {
+    height: 1.5rem !important;
+    width: 1.5rem !important;
+    box-shadow: none;
+}
+
+.layout-content-container {
+    position: relative;
+   /*  top: var(--tb-b); */
+    height: calc(100vh);
+
+    overflow-x: hidden;
+  
+    display: grid;
+    align-content: stretch;
+  
+    background-color: transparent;
+  	
+    animation-name: shownum;
+    animation-duration: 2s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+
+	padding-top: 0rem;
+    padding-left: 0.25rem;
+    padding-right: 1rem;
+    padding-bottom: 0rem;
+    
+    flex: 1 1 0;
+
+   /*  box-shadow: inset 1px 4px 20px 6px rgba(0, 0, 0, 0.32); */
+}
+
+@keyframes shownum {
+/*   from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  } */
+  0%   { opacity: 0.0; transform: translateX(-100%);}
+  12.5%  { opacity: 0.0; transform: translateX(-75%);}
+  25%  { opacity: 0.0; transform: translateX(-50%);}
+  37.5%  { opacity: 0.0; transform: translateX(-25%);}
+  50% { opacity: 0.1; transform: translateX(0);}
+  62.5%   { opacity: 0.4; transform: translateX(0);}
+  75%  { opacity: 0.75; transform: translateX(0);}
+  87.5%  { opacity: 0.9; transform: translateX(0);}
+  100% { opacity: 1; transform: translateX(0);}
+}
+
+.layout-content.leftbar-open {
+	margin-left: var(--mb-ml-open);
+}
+
+.layout-content.leftbar-close {
+	margin-left: var(--mb-ml-close);
+}
+
+.layout-content.leftbar-open-animation {
+	margin-left: var(--mb-ml-open);
+	animation-name: lb-ml-open;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+.layout-content.leftbar-close-animation {
+	margin-left: var(--mb-ml-close);
+	animation-name: lb-ml-close;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes lb-ml-open {
+from { margin-left: var(--mb-ml-close);}
+to {margin-left: var(--mb-ml-open);}
+}
+
+@keyframes lb-ml-close {
+from { margin-left: var(--mb-ml-open);}
+to {margin-left: var(--mb-ml-close);}
+}
+
+.layout-content.rightbar-open {
+	margin-right: var(--mb-mr-open);
+}
+
+.layout-content.rightbar-close {
+	margin-right: var(--mb-mr-close);
+}
+
+.layout-content.rightbar-open-animation {
+	margin-right: var(--mb-mr-open);
+	animation-name: rb-mr-open;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+.layout-content.rightbar-close-animation {
+	margin-right: var(--mb-mr-close);
+	animation-name: rb-mr-close;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes rb-mr-open {
+from {margin-right: var(--mb-mr-close); }
+to {margin-right: var(--mb-mr-open);}
+}
+
+@keyframes rb-mr-close {
+from {margin-right: var(--mb-mr-open);}
+to {margin-right: var(--mb-mr-close);}
+}
+
+
+.layout-wrapper .layout-rightbar {
+	display: block;
+	position: fixed;
+	z-index: 101;
+	top: var(--tb-b);
+	right: 0px;
+	height: 100%;
+	width: var(--rb-w-close);
+	/*  */
+	box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.32);
+	/*  */
+    background-color: var(--surface-card);
+    /*  */
+    background-image: url("#{resource['image/bg-911-sport-track-nbg.png']}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center;
+}
+
+.layout-wrapper .layout-rightbar.rightbar-open {
+	width: var(--rb-w-open);
+}
+
+.layout-wrapper .layout-rightbar.rightbar-close {
+	width: var(--rb-w-close);
+}
+
+.layout-wrapper .layout-rightbar.rightbar-open-animation {
+	width: var(--rb-w-open);
+	animation-name: rb-w-open;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+.layout-wrapper .layout-rightbar.rightbar-close-animation {
+	width: var(--rb-w-close);
+	animation-name: rb-w-close;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes rb-w-open {
+from {width: var(--rb-w-close);}
+to {width: var(--rb-w-open);}
+}
+
+@keyframes rb-w-close {
+from {width: var(--rb-w-open);}
+to {width: var(--rb-w-close);}
+}
+

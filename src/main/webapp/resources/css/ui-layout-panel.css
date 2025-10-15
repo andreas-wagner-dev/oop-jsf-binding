@@ -1,0 +1,204 @@
+
+body .ui-panelgrid .ui-panelgrid-cell {
+    border: none;
+    background: var(--surface-card);
+    padding: 0.5rem;
+}
+
+.ui-panel .ui-panel-titlebar, .ui-panel-content {
+    border: none !important;
+}
+
+/* 
+
+* ui-datatable 
+
+body .ui-datatable .ui-datatable-data>tr {
+	border: solid 0px transparent;
+}
+
+body .ui-datatable thead th {
+	border: solid 0px transparent;
+	overflow: initial;
+	text-align: center !important;
+}
+
+body .ui-datatable .ui-datatable-data>tr>td {
+	border: solid 0px transparent;
+	text-align: center !important;
+}
+
+body .ui-datatable .ui-datatable-data>tr.ui-state-hover {
+	border: solid 0px transparent;
+}
+
+body .ui-datatable .ui-datatable-data>tr.ui-state-highlight {
+	background: #007ad945;
+	color: #E91E63;
+}
+
+.ui-datatable .ui-paginator {
+	padding: 0 !important;
+	padding-top: 2px !important;
+}
+
+.sub-paginator>.ui-paginator {
+	background: none;
+	text-align: center !important;
+	border-bottom: 1px dotted #c8c8c8 !important;
+}
+
+.ui-paginator.ui-paginator-top .ui-paginator-top-right-content {
+	margin-top: 0px;
+	float: right;
+}
+
+.ui-datatable-sticky {
+	z-index: 994 !important;
+}
+
+.ui-paginator.ui-paginator-top .ui-paginator-top-left-content {
+	float: left;
+	margin-left: 15px;
+	font-size: x-large;
+	font-weight: bold;
+}
+
+body .ui-paginator .ui-paginator-current, body .ui-paginator .ui-paginator-rpp-options
+	{
+	margin: 0 !important;
+	border-radius: 3px;
+}
+
+body .ui-paginator .ui-paginator-current {
+	padding: 0 !important;
+	margin: 0 !important;
+	margin-top: 5px !important;
+	vertical-align: baseline;
+}
+.ui-paginator.ui-paginator-top .ui-paginator-top-right-content {
+	margin-top: 0px !important;
+	margin-right: 10px;
+	float: right;
+}
+
+* ui-datatable 
+
+body .ui-datatable  {
+	box-shadow: 1px 0px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+body .ui-datatable .ui-datatable-data>tr {
+	border: solid 0px transparent;
+}
+
+body .ui-datatable.ui-datatable-sm thead>tr>th>input {
+	padding: .229rem .229rem;
+	font-size: 0.8rem;
+}
+
+.ui-selectonemenu .ui-selectonemenu-label {
+	padding: .229rem .229rem;
+	font-size: 0.8rem;
+}
+
+.ui-datatable-scrollable-theadclone {
+	display: none !important;
+	height: 0px !important;
+}
+
+
+body .ui-datatable thead th {
+	border: solid 0px transparent;
+	overflow: initial;
+	text-align: center !important;
+	vertical-align: bottom !important;
+}
+
+body .ui-datatable thead th .ui-column-title {
+	font-weight: 700;
+	vertical-align: bottom !important;
+	font-size: 0.8rem;
+}
+
+body .ui-datatable thead th .ui-column-title>label {
+	font-weight: 700;
+	vertical-align: bottom !important;
+	font-size: 0.8rem;
+}
+
+body .ui-datatable thead th>.ui-sortable-column-icon {
+	font-size: 0.8rem;
+}
+
+body .ui-datatable .ui-datatable-data>tr>td {
+	border: solid 0px transparent;
+	text-align: center !important;
+}
+
+body .ui-datatable .ui-datatable-data>tr.ui-state-hover {
+	border: solid 0px transparent;
+	background: #1a191936;
+}
+
+body .ui-datatable .ui-datatable-data>tr.ui-state-highlight {
+	background: #1a191136;
+		color: #d5001c;
+	color: #950014;
+	font-weight: bold;
+	box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, .2), 0px 2px 2px 0px
+		rgba(0, 0, 0, .14), 0px 1px 5px 0px rgba(0, 0, 0, .12);
+}
+
+body .ui-paginator {
+    background: #ffffff;
+    border: solid #c8c8c8;
+    border-width: 1px;
+    padding: 1rem;
+}
+
+body .ui-datatable .ui-paginator.ui-paginator-top, body .ui-datatable .ui-paginator.ui-paginator-bottom
+	{
+	border: solid 1px transparent;
+}
+
+body .ui-datatable .ui-datatable-header, body .ui-datatable .ui-datatable-footer
+	{
+	border: solid 0px transparent;
+}
+
+.ui-datatable .ui-paginator {
+	padding-top: 2px !important;
+	padding-bottom: 4px !important;
+}
+
+.sub-paginator>.ui-paginator {
+	background: none;
+	text-align: center !important;
+	border-bottom: 1px dotted #c8c8c8 !important;
+}
+
+.ui-paginator.ui-paginator-top .ui-paginator-top-right-content {
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.ui-paginator.ui-paginator-top .ui-paginator-top-left-content {
+	float: left;
+	margin-left: 10px;
+	font-size: x-large;
+	font-weight: bold;
+}
+
+body .ui-paginator .ui-paginator-current, body .ui-paginator .ui-paginator-rpp-options
+	{
+	margin: 0 !important;
+	border-radius: 3px;
+}
+
+body .ui-paginator .ui-paginator-current {
+	padding: 0 !important;
+	margin: 0 !important;
+	margin-top: 5px !important;
+	vertical-align: baseline;
+ }*/

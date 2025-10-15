@@ -1,0 +1,26 @@
+/* ui-button-raised ui-button  important **/
+body .ui-button {
+    /* background: var(--primary-color); */
+    background: none;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    margin: 0;
+    outline: 0 none;
+    border-radius: 3px;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+
+.ui-button, .ui-inputfield, .ui-selectonemenu, .ui-chkbox-box,
+	.ui-splitbutton {
+	box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, .2), 0px 2px 2px 0px
+		rgba(0, 0, 0, .14), 0px 1px 5px 0px rgba(0, 0, 0, .12);
+}
+
+a {
+	text-shadow: -0.5px 0.5px 0px #41519d63;
+}
+
+
+body .ui-button.ui-button-raised {
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}

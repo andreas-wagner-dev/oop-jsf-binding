@@ -1,0 +1,57 @@
+/* 
+	ui-datepicker 
+*/
+body .ui-datepicker.ui-input-overlay {
+	border: 1px solid #c8c8c8;
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+	z-index: 1100 !important;
+}
+
+body .ui-datepicker {
+	background: #fff;
+	border: 1px solid #a6a6a6;
+	color: #333;
+	padding: 0;
+	width: auto;
+	border-radius: 3px;
+}
+.p-datepicker {
+    position: relative;
+    display: inline-block;
+    width: 100% !important;
+}
+body .ui-datepicker .ui-datepicker-calendar {
+	margin: 0;
+}
+
+.ui-datepicker table {
+	width: 100%;
+	font-size: .9em;
+	border-collapse: collapse;
+	margin: 0;
+}
+
+body .ui-datepicker .ui-datepicker-calendar td {
+	padding: 0;
+	text-align: center;
+}
+
+body .ui-datepicker .ui-datepicker-calendar td>a, body .ui-datepicker .ui-datepicker-calendar td>span
+	{
+	padding: 0;
+	color: #333;
+	text-align: center;
+	width: 1.5rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	border: 0 none;
+	display: inline-block;
+	transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+		box-shadow 0.2s, opacity 0.2s;
+	border-radius: 50%;
+}
+
+body .ui-datepicker .ui-datepicker-calendar td {
+    padding: 0;
+    text-align: center;
+}

@@ -1,0 +1,59 @@
+/* speeddial */
+.ui-speeddial {
+	position: absolute;
+	right: 0px;
+	top: -8px;
+	display: flex;
+	z-index: 102;
+	display: flex;
+}
+
+.ui-speeddial-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block; 
+    align-items: center;
+    justify-content: center;
+    /* transition: top 0slinear .2s; */
+    pointer-events: none;
+}
+
+.menu-ui-button {
+	box-shadow: none;
+	background: #d32f2f00 !important;
+	color: black !important;
+	border: none !important;
+	box-shadow: none;
+}
+
+body .ui-speeddial-button.ui-button.ui-button-icon-only {
+	width: 1.5rem;
+	height: 3.45rem;
+	background: #d32f2f00 !important;
+	color: black !important;
+	border: none !important;
+	margin-top: 0px !important;
+	margin-left: 0px !important;
+	margin-right: 15px;
+	box-shadow: none;
+}
+
+body .ui-speeddial-button>.pi-ellipsis-h {
+	font-size: 1.25rem;
+	top: 17px !important;
+	margin-top: -0.3rem !important;
+}
+
+body .ui-speeddial-button>.pi-angle-double-right {
+	font-size: 1.25rem;
+	top: 17px !important;
+	margin-top: -0.3rem !important;
+}
+
+body .ui-speeddial-action {
+	width: 2.5rem;
+	height: 2.5rem;
+	background: #32424921;
+	color: #161616;
+}

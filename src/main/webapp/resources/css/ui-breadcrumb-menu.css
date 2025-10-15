@@ -1,0 +1,53 @@
+/* speeddial */
+body .ui-breadcrumb {
+	border: none;
+	padding: 0;
+	/*padding-left: 1rem:*/
+	padding-top: 0.25rem;
+	padding-right: 1rem;
+	padding-bottom: 0.25rem;
+	padding-left: 0.8rem;
+	margin-top: 5px;
+}
+
+body .ui-breadcrumb ol li a.ui-menuitem-link {
+	color: #000;
+	/*	margin: 0;*/
+	float: none;
+	/* padding: 0.0em 0.25em 0.0em 0.5em;*/
+}
+
+body .ui-breadcrumb .ui-breadcrumb-items li .ui-menuitem-link .ui-menuitem-text
+	{
+	color: var(--primary-color);
+}
+
+body .ui-breadcrumb .ui-breadcrumb-items li:last-child .ui-menuitem-link .ui-menuitem-text
+	{
+	color: var(--primary-color);
+	text-decoration: underline;
+}
+
+body  .ui-breadcrumb .ui-icon-triangle-1-e {
+	display: none !important;
+}
+
+body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link .ui-menuitem-icon
+	{
+	margin-right: .5rem;
+	vertical-align: middle;
+	float: none;
+	color: #333;
+	font-size: 1.25rem;
+}
+
+body .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link {
+	padding: .857rem;
+	padding-right: 0.4rem !important;
+	width: 100%;
+	border: 0 none;
+	float: none;
+	border-radius: 0;
+	transition: background-color .2s, color .2s, border-color .2s,
+		box-shadow .2s, opacity .2s;
+}

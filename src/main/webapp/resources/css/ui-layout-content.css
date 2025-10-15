@@ -1,0 +1,104 @@
+
+.ui-bg-opacity-0-1 {
+	animation-name: opacity-0-1;
+    animation-timing-function: linear;
+    animation-duration: 1500ms !important;
+    animation-iteration-count: 1 !important;
+}
+
+@keyframes opacity-0-1 {
+ 0% {
+    opacity: 0;
+ } 
+  50%{
+    opacity: .0;
+ }
+  70%{
+    opacity: .1;
+ }
+  80%{
+    opacity: .2;
+ }
+  95%{
+    opacity: .9;
+ }
+ 100%{
+    opacity: 1;
+ }
+}
+
+.ui-bg-flipped {
+	backface-visibility: visible;
+    animation-name: flipped;
+    animation-timing-function: linear;
+    animation-duration: 1500ms !important;
+    animation-iteration-count: 1 !important;
+}
+
+@keyframes flipped {
+ 0% {
+    overflow:hidden;
+    transform: rotateY(180deg);
+    background-image: url("#{resource['image/bg-track-road-stop-bw.jpg']}");
+    background-size: cover; 
+    background-repeat: no-repeat;
+ } 
+ 100%{
+    overflow:auto;
+    transform: rotateY(0deg);
+/*     background-image: url("#{resource['image/bg-track-road-stop-bw.jpg']}");
+    background-size: cover; 
+    background-repeat: no-repeat;  */
+ }
+}
+
+.ui-bg-shownum {
+    backface-visibility: visible;
+    animation-name: shownum;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shownum {
+/*   from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  } */
+  0%   { opacity: 0.0; transform: translateX(-100%);}
+  12.5%  { opacity: 0.0; transform: translateX(-75%);}
+  25%  { opacity: 0.0; transform: translateX(-50%);}
+  37.5%  { opacity: 0.0; transform: translateX(-25%);}
+  50% { opacity: 0.1; transform: translateX(0);}
+  62.5%   { opacity: 0.4; transform: translateX(0);}
+  75%  { opacity: 0.75; transform: translateX(0);}
+  87.5%  { opacity: 0.9; transform: translateX(0);}
+  100% { opacity: 1; transform: translateX(0);}
+}
+
+.animation-flip-up {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    
+    backface-visibility: visible;
+    animation-name: flip-up;
+    animation-timing-function: linear;
+    animation-duration: 1000ms !important;
+    animation-iteration-count: 1 !important;
+}
+
+
+@keyframes flip-up {
+	0% {
+	    transform: perspective(2000px) rotateX(100deg);
+	    opacity: 0;
+	}
+	100% {
+	    transform: perspective(2000px) rotateX(0);
+	    opacity: 1;
+	}
+}

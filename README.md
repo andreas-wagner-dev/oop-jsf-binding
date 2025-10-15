@@ -13,9 +13,10 @@ run MAVEN commands in the root folder of the Java project:
 ``mvn initialize``
 
 - for standalone app as .jar <br/>
-``mvn pakage``
+``mvn package``
 
-Die Anwendung kann als WAR in einem Jakarta EE-kompatiblen Server (z.B. WildFly, Payara) oder lokal mit einer H2-In-Memory-Datenbank gestartet werden.
+- Die Anwendung kann als *WAR* in einem Jakarta EE-kompatiblen Server (z.B. WildFly, Payara) 
+- oder lokal als *JAR* embetted WildFly, mit einer H2-In-Memory-Datenbank, gestartet werden.
 
 ## Architektur und OOP-Prinzipien
 
@@ -28,16 +29,15 @@ Die Anwendung folgt den klassischen OOP-Prinzipien:
 
 ## Komponenten
 
-- **Domain Layer:** Die Interfaces und deren Implementierungen für Aufgaben und Ordner.
-- **Persistence Layer:** Die Klasse [`org.task.db.H2Db`](src/main/java/org/task/db/H2Db.java) initialisiert die Datenbank und stellt Testdaten bereit.
-- **Presentation Layer:** Die Managed Beans wie [`org.task.ui.TaskForm`](src/main/java/org/task/ui/TaskForm.java) binden die UI-Komponenten direkt an die Domänenobjekte.
-- **Web Layer:** REST-API-Endpunkte wie [`org.task.web.TaskResource`](src/main/java/org/task/web/TaskResource.java) ermöglichen den Zugriff auf Aufgaben als JSON-Ressourcen.
+- **Domain:** Die Interfaces und deren Implementierungen für Aufgaben und Ordner.
+- **Persistence:** Die Klasse [`org.task.db.H2Db`](src/main/java/org/task/db/H2Db.java) initialisiert die Datenbank und stellt Testdaten bereit.
+- **Presentation:** Die Managed Beans wie [`org.task.ui.TaskForm`](src/main/java/org/task/ui/TaskForm.java) binden die UI-Komponenten direkt an die Domänenobjekte.
+- **Webservice:** REST-API-Endpunkte wie [`org.task.web.TaskResource`](src/main/java/org/task/web/TaskResource.java) ermöglichen den Zugriff auf Aufgaben als JSON-Ressourcen.
 
 ## UI-Binding
 
 Die Anwendung zeigt, wie JSF-Komponenten über das `binding`-Attribut direkt mit den Methoden der Domänenobjekte verbunden werden können. 
 - **Beispiel:** Die Methode `displayTo(HtmlOutputText output)` im Task-Objekt setzt die Darstellung direkt auf das UI-Element.
-
 
 
 ## Beispielhafte OOP-Implementierung

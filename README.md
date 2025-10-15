@@ -36,14 +36,16 @@ Die Anwendung folgt den klassischen OOP-Prinzipien:
 
 ## UI-Binding
 
-Die Anwendung zeigt, wie JSF-Komponenten über das `binding`-Attribut direkt mit den Methoden der Domänenobjekte verbunden werden können. 
+Die Anwendung zeigt, wie JSF-Komponenten über das `binding`-Attribut direkt mit den Methoden der Domänenobjekte verbunden werden können.
+
 - **Beispiel:** Die Methode `displayTo(HtmlOutputText output)` im Task-Objekt setzt die Darstellung direkt auf das UI-Element.
 
 
 ## Beispielhafte OOP-Implementierung
 
 - Aufgaben und Ordner werden als Objekte modelliert, die ihre eigene Persistenz und Anzeige steuern.
-- Die UI-Komponenten werden direkt von den Objekten aktualisiert, z.B. durch Methoden wie `displayTo(Tree tree)` oder `displayTasksTo(DataTable table)`.
+- Die UI-Komponenten werden direkt von den Objekten aktualisiert.
+- Z.B. durch Methoden wie `displayTo(Tree tree)` oder `displayTasksTo(DataTable table)`.
 
 ## Weiterführende Links
 

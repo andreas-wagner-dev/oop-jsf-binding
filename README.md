@@ -43,11 +43,17 @@ The application demonstrates how JSF components can be connected directly to the
 * The UI components are updated directly by the objects themselves.  
 * E.g., through methods like `displayTo(Tree tree)` or `displayTasksTo(DataTable table)`.
 
-## **Further Links**
 
+## **Project Links**
 * [src/main/java/org/task/Task.java](https://www.google.com/search?q=src/main/java/org/task/Task.java)  
 * [src/main/java/org/task/Folder.java](https://www.google.com/search?q=src/main/java/org/task/Folder.java)  
 * [src/main/java/org/task/db/DbTask.java](https://www.google.com/search?q=src/main/java/org/task/db/DbTask.java)  
 * [src/main/java/org/task/db/DbFolder.java](https://www.google.com/search?q=src/main/java/org/task/db/DbFolder.java)  
 * [src/main/java/org/task/ui/TaskForm.java](https://www.google.com/search?q=src/main/java/org/task/ui/TaskForm.java)  
 * [src/main/java/org/task/web/TaskResource.java](https://www.google.com/search?q=src/main/java/org/task/web/TaskResource.java)
+
+## **References**
+
+[Writing Properties Bound to Component Instances.](https://javaee.github.io/tutorial/jsf-develop002.html)
+
+

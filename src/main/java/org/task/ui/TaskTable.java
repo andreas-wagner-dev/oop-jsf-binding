@@ -26,7 +26,7 @@ import org.task.Task;
 import org.task.db.DbTask;
 
 /**
- * Implementation of LazyDataModel render Tasks as Table.
+ * LazyDataModel implementation for rendering Task objects in a table.
  */
 public class TaskTable extends LazyDataModel<Task> {
 

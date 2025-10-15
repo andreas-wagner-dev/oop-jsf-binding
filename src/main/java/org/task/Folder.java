@@ -5,20 +5,45 @@ import java.sql.Connection;
 import org.primefaces.component.datatable.DataTable;
 import org.primefaces.component.tree.Tree;
 
+/**
+ * Domain interface for a Folder object.
+ * Responsible for business logic, persistence, and UI display.
+ */
 public interface Folder {
 
-	String id();
+    /**
+     * Returns the unique identifier of the folder.
+     */
+    String id();
 
-	boolean ident(String id);
+    /**
+     * Checks if the given id matches this folder's id.
+     */
+    boolean ident(String id);
 
-	Iterable<Folder> children();
+    /**
+     * Returns the child folders of this folder.
+     */
+    Iterable<Folder> children();
 
-	Iterable<Task> tasks();
+    /**
+     * Returns the tasks contained in this folder.
+     */
+    Iterable<Task> tasks();
 
-	void persistTo(Connection connection);
+    /**
+     * Persists the folder and its contents to the given database connection.
+     */
+    void persistTo(Connection connection);
 
-	void displayTo(Tree tree);
+    /**
+     * Displays this folder in the given PrimeFaces Tree component.
+     */
+    void displayTo(Tree tree);
 
-	void displayTasksTo(DataTable taskTable);
+    /**
+     * Displays the tasks of this folder in the given PrimeFaces DataTable component.
+     */
+    void displayTasksTo(DataTable taskTable);
 
 }

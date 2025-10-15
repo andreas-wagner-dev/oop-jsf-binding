@@ -28,23 +28,8 @@ import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import jakarta.servlet.ServletContext;
 
-// --- 3. PRESENTATION LAYER: CDI Managed Bean (Controller) ---
-// - https://javaee.github.io/tutorial/jsf-custom013.html
-// - https://stackoverflow.com/questions/9723488/how-to-bind-jsf-component-to-backing-bean-property
-
 /**
- *
- * Adapt the UI components through the binding attribute of the faces tag-lib
- * elements in the .xhtml file to present data by the objects it's self's.
- *
- * If the binding attribute on a component was declared or assigned to a
- * property of a backing bean, then the JSF will call the getter, if the getter
- * is null the JSF will create a new instance of the declared component in the
- * .xhtml and call the setter of binding property with the instance.
- *
- * <pre>
- *  h:outputText binding="#{taskFrom.taskOutputText}" ...
- * </pre>
+ * Managed bean (controller) for binding UI components to domain objects.
  */
 @Named
 @ViewScoped

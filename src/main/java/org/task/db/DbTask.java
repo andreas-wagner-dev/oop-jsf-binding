@@ -23,6 +23,9 @@ import org.task.ui.TaskTable;
 
 import jakarta.faces.component.html.HtmlOutputText;
 
+/**
+ * Implementation of the Task domain object with database persistence.
+ */
 public class DbTask implements Task, Serializable {
 
 	private static final long serialVersionUID = 1L;

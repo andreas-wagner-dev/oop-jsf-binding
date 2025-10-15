@@ -21,7 +21,9 @@ import org.task.Task;
 import org.task.ui.FolderTree;
 import org.task.ui.TaskTable;
 
-// https://docs.oracle.com/javase/8/docs/api/javax/sql/rowset/CachedRowSet.html
+/**
+ * Implementation of the Folder domain object with database persistence.
+ */
 public class DbFolder implements Folder, Serializable {
 
 	private static final long serialVersionUID = 1L;

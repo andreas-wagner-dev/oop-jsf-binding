@@ -6,26 +6,26 @@ import java.sql.Connection;
 
 import jakarta.faces.component.html.HtmlOutputText;
 
-//--- 1. DOMAIN LAYER: Task Interface und Implementierung (UI of Objects) ---
+//--- 1. DOMAIN LAYER: Task Interface and Implementation (UI of Objects) ---
 /**
- * Das Domain-Interface, welches Verantwortung für Business-Logik, Persistenz
- * und Anzeige (UI of Objects) trägt.
+ * The domain interface, which is responsible for business logic, persistence,
+ * and display (UI of Objects).
  */
 public interface Task extends Serializable {
-	String id();
+    String id();
 
-	String description();
+    String description();
 
-	boolean ident(String id);
+    boolean ident(String id);
 
-	boolean isCompleted();
+    boolean isCompleted();
 
-	Task complete();
+    Task complete();
 
-	void persistTo(Connection connection);
+    void persistTo(Connection connection);
 
-	void displayTo(HtmlOutputText output);
+    void displayTo(HtmlOutputText output);
 
-	void print(Writer writer);
+    void print(Writer writer);
 
 }

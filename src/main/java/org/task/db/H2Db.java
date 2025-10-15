@@ -19,7 +19,9 @@ import org.task.Db;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
-// --- 2. DATA SOURCE : H2 In-Memory Datenbank ---
+/**
+ * Implementation of Db for H2 in-memory database using HikariCP connection pool.
+ */
 public class H2Db implements Db, Serializable {
 
 	private static final long serialVersionUID = 1L;

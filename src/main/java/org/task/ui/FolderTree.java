@@ -13,6 +13,9 @@ import org.primefaces.model.TreeNodeChildren;
 import org.task.Folder;
 import org.task.Task;
 
+/**
+ * TreeNode implementation for representing Folder domain objects in the UI.
+ */
 public class FolderTree extends CheckboxTreeNode<Object> implements Folder {
 
 	public static final String TEST42_EXPLORER = "Test-Catalog-Explorer";

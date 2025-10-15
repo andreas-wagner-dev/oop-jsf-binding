@@ -18,7 +18,7 @@ This project is an example application demonstrating **Object-Oriented Programmi
 
 The application adheres to classic OOP principles:
 
-* **Abstraction:** The interfaces [org.task.Task](https://www.google.com/search?q=src/main/java/org/task/Task.java) and [org.task.Folder](https://www.google.com/search?q=src/main/java/org/task/Folder.java) define the fundamental operations for tasks and folders, independent of their concrete implementation.  
+* **Abstraction:** The interfaces [org.task.Task](https://www.google.com/search?q=src/main/java/org/task/Task.java) and [org.task.Folder](https://www.google.com/search?q=src/main/java/org/task/Folder.java) define the fundamental behaviar as operations for tasks and folders, independent of their concrete implementation.  
 * **Encapsulation:** The implementations [org.task.db.DbTask](https://www.google.com/search?q=src/main/java/org/task/db/DbTask.java) and [org.task.db.DbFolder](https://www.google.com/search?q=src/main/java/org/task/db/DbFolder.java) encapsulate database logic and provide methods for display and persistence.  
 * **Inheritance:** The application uses inheritance, for instance, by extending framework classes like LazyDataModel\<Task\> in [org.task.ui.TaskTable](https://www.google.com/search?q=src/main/java/org/task/ui/TaskTable.java).  
 * **Polymorphism:** UI components and controllers work with the interfaces, allowing various implementations (e.g., for testing or different data sources) to be easily swapped.

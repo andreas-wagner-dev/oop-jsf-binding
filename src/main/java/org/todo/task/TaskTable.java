@@ -1,4 +1,4 @@
-package org.task.ui;
+package org.todo.task;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -22,8 +22,7 @@ import org.primefaces.model.LazyDataModel;
 import org.primefaces.model.MatchMode;
 import org.primefaces.model.SortMeta;
 import org.primefaces.model.SortOrder;
-import org.task.Task;
-import org.task.db.DbTask;
+import org.todo.Task;
 
 /**
  * LazyDataModel implementation for rendering Task objects in a table.

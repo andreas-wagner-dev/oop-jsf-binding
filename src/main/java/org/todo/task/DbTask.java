@@ -1,4 +1,4 @@
-package org.task.db;
+package org.todo.task;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,9 +17,8 @@ import java.util.UUID;
 import javax.sql.DataSource;
 
 import org.primefaces.component.datatable.DataTable;
-import org.task.Db;
-import org.task.Task;
-import org.task.ui.TaskTable;
+import org.todo.Db;
+import org.todo.Task;
 
 import jakarta.faces.component.html.HtmlOutputText;
 

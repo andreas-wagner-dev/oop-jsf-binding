@@ -1,4 +1,4 @@
-package org.task.ui;
+package org.todo.task;
 
 import java.io.Serializable;
 import java.sql.Connection;
@@ -15,10 +15,10 @@ import org.primefaces.event.NodeUnselectEvent;
 import org.primefaces.event.SelectEvent;
 import org.primefaces.event.UnselectEvent;
 import org.primefaces.model.TreeNode;
-import org.task.Db;
-import org.task.Folder;
-import org.task.Task;
-import org.task.db.DbFolder;
+import org.todo.Db;
+import org.todo.Folder;
+import org.todo.Task;
+import org.todo.folder.DbFolder;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.faces.component.html.HtmlOutputText;

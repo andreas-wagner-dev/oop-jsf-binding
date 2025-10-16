@@ -1,11 +1,10 @@
-package org.task.web;
+package org.todo.task;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
-import org.task.Db;
-import org.task.Task;
-import org.task.db.DbTask;
+import org.todo.Db;
+import org.todo.Task;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.inject.Inject;

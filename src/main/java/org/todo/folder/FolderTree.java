@@ -1,4 +1,4 @@
-package org.task.ui;
+package org.todo.folder;
 
 import java.sql.Connection;
 import java.util.Objects;
@@ -10,8 +10,8 @@ import org.primefaces.model.DefaultTreeNode;
 import org.primefaces.model.DefaultTreeNodeChildren;
 import org.primefaces.model.TreeNode;
 import org.primefaces.model.TreeNodeChildren;
-import org.task.Folder;
-import org.task.Task;
+import org.todo.Folder;
+import org.todo.Task;
 
 /**
  * TreeNode implementation for representing Folder domain objects in the UI.

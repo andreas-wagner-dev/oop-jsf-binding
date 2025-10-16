@@ -1,4 +1,4 @@
-package org.task;
+package org.todo;
 
 /**
  * Marker interface for the application.

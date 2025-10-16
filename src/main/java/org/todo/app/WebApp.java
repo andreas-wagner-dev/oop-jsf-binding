@@ -1,7 +1,6 @@
-package org.task.app;
+package org.todo.app;
 
-import org.task.Db;
-import org.task.db.H2Db;
+import org.todo.Db;
 
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;

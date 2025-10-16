@@ -1,4 +1,4 @@
-package org.task.db;
+package org.todo.folder;
 
 import java.io.Serializable;
 import java.sql.Connection;
@@ -16,10 +16,10 @@ import org.primefaces.component.datatable.DataTable;
 import org.primefaces.component.tree.Tree;
 import org.primefaces.model.DefaultTreeNode;
 import org.primefaces.model.TreeNode;
-import org.task.Folder;
-import org.task.Task;
-import org.task.ui.FolderTree;
-import org.task.ui.TaskTable;
+import org.todo.Folder;
+import org.todo.Task;
+import org.todo.task.DbTask;
+import org.todo.task.TaskTable;
 
 /**
  * Implementation of the Folder domain object with database persistence.

@@ -1,4 +1,4 @@
-package org.task;
+package org.todo;
 
 import java.io.Serializable;
 import java.io.Writer;

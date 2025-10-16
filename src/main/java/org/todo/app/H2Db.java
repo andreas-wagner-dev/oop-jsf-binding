@@ -1,4 +1,4 @@
-package org.task.db;
+package org.todo.app;
 
 import java.io.PrintWriter;
 import java.io.Serializable;
@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 import javax.sql.DataSource;
 
-import org.task.Db;
+import org.todo.Db;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

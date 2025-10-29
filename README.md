@@ -7,9 +7,9 @@ Demonstrating **Object-Oriented Programming (OOP) principles** where objects con
 * The application can be started as a *WAR* on a Jakarta EE compliant server (e.g., WildFly, Payara) or locally as a *JAR* (with embedded WildFly), using an H2 in-memory database.
 
 ## Quick Start
-
-1. run in cmd:
-``mvn package`` - for standalone app as **.jar** or ``mvn initialize`` - for server deployment as **.war** 
+**Required:** Java 11+
+1. run in cmd: ``mvn package`` - standalone application - as executable **.jar**
+* or optional: ``mvn install`` - jee server application - as deployable  **.war** 
 2. then browse: [http://localhost:8080/index.xhtml](http://localhost:8080/index.xhtml)
 
 ## **Architecture and OOP Principles**

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This example demonstrating **Object-Oriented Programming (OOP) principles** within a Java web application using Jakarta EE and PrimeFaces.
+Demonstrating **Object-Oriented Programming (OOP) principles** where objects that control their own persistence and display logic within a Java web application using Jakarta EE and PrimeFaces.
 * The application manages tasks (Task) and folders (Folder) in a hierarchical structure and showcases how **UI components can be directly bound to domain objects**.
 * The application can be started as a *WAR* on a Jakarta EE compliant server (e.g., WildFly, Payara) or locally as a *JAR* (with embedded WildFly), using an H2 in-memory database.
 

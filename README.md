@@ -2,17 +2,15 @@
 
 ## Overview
 
-Demonstrating **Object-Oriented Programming (OOP) principles** where objects that control their own persistence and display logic within a Java web application using Jakarta EE and PrimeFaces.
+Demonstrating **Object-Oriented Programming (OOP) principles** where objects controls their own persistence and display logic within a Java web application using Jakarta EE and PrimeFaces.
 * The application manages tasks (Task) and folders (Folder) in a hierarchical structure and showcases how **UI components can be directly bound to domain objects**.
 * The application can be started as a *WAR* on a Jakarta EE compliant server (e.g., WildFly, Payara) or locally as a *JAR* (with embedded WildFly), using an H2 in-memory database.
 
 ## Quick Start
 
-1. Navigate in the root project folder and run in cmd:
-
+1. run in cmd:
 ``mvn package`` - for standalone app as **.jar** or ``mvn initialize`` - for server deployment as **.war** 
-
-2. Open the browser and navigate to: [http://localhost:8080/index.xhtml](http://localhost:8080/index.xhtml)
+2. then browse: [http://localhost:8080/index.xhtml](http://localhost:8080/index.xhtml)
 
 ## **Architecture and OOP Principles**
 

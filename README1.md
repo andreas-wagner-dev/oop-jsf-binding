@@ -301,13 +301,13 @@ The following **docker** commands have to be used to add the required images to 
  ``docker pull quay.io/wildfly/wildfly:27.0.0.Final-jdk17``
 
 - change the host of the tag on local docker machine</h4>
- ``docker tag quay.io/wildfly/wildfly:27.0.0.Final-jdk17 cr.cicd.skyway.porsche.com/testmanager_x42/test-exchange-42/tex-42/wildfly:27.0.0.Final-jdk17 ``
+ ``docker tag quay.io/wildfly/wildfly:27.0.0.Final-jdk17 [pathTo]/wildfly:27.0.0.Final-jdk17 ``
  
 - login to docker machine of target environment<br/>
- ``docker login cr.cicd.skyway.porsche.com -u {gitlab-user} -p {gitlab-password]``
+ ``docker login [login-host] -u {gitlab-user} -p {gitlab-password]``
 
 - upload tagged-image to docker machine of target environment<br/>
- ``docker push cr.cicd.skyway.porsche.com/testmanager_x42/test-exchange-42/tex-42/wildfly:27.0.0.Final-jdk17``
+ ``docker push [pathTo]/wildfly:27.0.0.Final-jdk17``
 
 **Dockerfile**<br/><br/>
 

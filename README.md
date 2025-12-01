@@ -26,7 +26,7 @@ The application adheres to classic OOP principles:
 
 ## **Components**
 
-* **Application:** The root Composition of all implementations in the package ``app/`` contains Startup, Dependency-Injection and Properties. 
+* **Application:** The root Composition of all implementations in the package ``app/`` contains main Startup and Dependency-Injection. 
 * **Domain:** The main interfaces in the namaspace (package) ``todo/`` and their implementations for tasks ``task/`` and folders ``folder/``.
 * **Persistence:** The class [org.todo.app.H2Db](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/app/H2Db.java) initializes the database and provides test data.  
 * **Presentation:** *Managed Beans* like [org.todo.task.TaskForm](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/task/TaskForm.java) bind UI components directly to the domain objects.  

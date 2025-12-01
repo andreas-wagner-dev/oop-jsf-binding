@@ -1,4 +1,4 @@
-# OOP-Jsf-Binding
+#  OOP-Jsf-Binding
 
 Demonstrating **Object-Oriented Programming (OOP) principles** where objects controls their own persistence and display logic within a Java web application using Jakarta EE and PrimeFaces.
 

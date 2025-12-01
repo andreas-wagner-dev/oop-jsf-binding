@@ -1,9 +1,10 @@
 # OOP-Jsf-Binding
 
+Demonstrating **Object-Oriented Programming (OOP) principles** where objects controls their own persistence and display logic within a Java web application using Jakarta EE and PrimeFaces.
+
 ## Overview
 
-Demonstrating **Object-Oriented Programming (OOP) principles** where objects controls their own persistence and display logic within a Java web application using Jakarta EE and PrimeFaces.
-* The application manages tasks (Task) and folders (Folder) in a hierarchical structure and showcases how **UI components can be directly bound to domain objects**.
+* The application manages tasks (``Task``) and folders (``Folder``) in a hierarchical structure and showcases how **UI components can be directly bound to domain objects**.
 * The application can be started as a *WAR* on a Jakarta EE compliant server (e.g., WildFly, Payara) or locally as a *JAR* (with embedded WildFly), using an H2 in-memory database.
 
 ## Quick Start
@@ -17,8 +18,8 @@ Demonstrating **Object-Oriented Programming (OOP) principles** where objects con
 The application adheres to classic OOP principles:
 
 * **Abstraction:** The interfaces [org.todo.Task](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/Task.java) and [org.todo.Folder](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/Folder.java) define the fundamental behavior as operations for tasks and folders, independent of their concrete implementation.  
-* **Encapsulation:** The implementations [org.todo.task.DbTask](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/task/DbTask.java) and [org.todo.task.DbFolder](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/task/DbFolder.java) encapsulate database logic and provide methods for display and persistence.  
-* **Inheritance:** The application uses inheritance, for instance, by extending framework classes like LazyDataModel\<Task\> in [org.todo.ui.TaskTable](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/ui/TaskTable.java).  
+* **Encapsulation:** The implementations [org.todo.task.DbTask](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/task/DbTask.java) and [org.todo.folder.DbFolder](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/folder/DbFolder.java) encapsulate database logic and provide methods for display and persistence.  
+* **Inheritance:** The application uses inheritance, for instance, by extending framework classes like ``LazyDataModel<Task>`` in [org.todo.task.TaskTable](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/task/TaskTable.java).  
 * **Polymorphism:** UI components and controllers work with the interfaces, allowing various implementations (e.g., for testing or different data sources) to be easily swapped.
 
 ## **Components**
@@ -26,8 +27,8 @@ The application adheres to classic OOP principles:
 * **Application:** The root Composition of all implementations: Startup, DI and Properties.  
 * **Domain:** The interfaces and their implementations for tasks and folders.  
 * **Persistence:** The class [org.todo.app.H2Db](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/app/H2Db.java) initializes the database and provides test data.  
-* **Presentation:** Managed Beans like [org.todo.ui.TaskForm](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/ui/TaskForm.java) bind UI components directly to the domain objects.  
-* **Webservice:** REST API endpoints such as [org.todo.web.TaskResource](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/web/TaskResource.java) allow access to tasks as JSON resources.
+* **Presentation:** Managed Beans like [org.todo.task.TaskForm](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/task/TaskForm.java) bind UI components directly to the domain objects.  
+* **Webservice:** REST API endpoints such as [org.todo.task.TaskResource](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/task/TaskResource.java) allow access to tasks as JSON resources.
 
 ## **UI Binding**
 
@@ -46,10 +47,10 @@ The application demonstrates how JSF components can be connected directly to the
 * [src/main/java/org/todo/Task.java](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/Task.java)  
 * [src/main/java/org/todo/Folder.java](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/Folder.java)  
 * [src/main/java/org/todo/task/DbTask.java](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/task/DbTask.java)  
-* [src/main/java/org/todo/task/DbFolder.java](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/task/DbFolder.java)  
-* [src/main/java/org/todo/ui/TaskForm.java](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/ui/TaskForm.java)  
-* [src/main/java/org/todo/ui/TaskTable.java](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/ui/TaskTable.java)  
-* [src/main/java/org/todo/web/TaskResource.java](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/web/TaskResource.java)  
+* [src/main/java/org/todo/folder/DbFolder.java](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/folder/DbFolder.java)  
+* [src/main/java/org/todo/task/TaskForm.java](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/task/TaskForm.java)  
+* [src/main/java/org/todo/task/TaskTable.java](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/task/TaskTable.java)  
+* [src/main/java/org/todo/task/TaskResource.java](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/task/TaskResource.java)  
 * [src/main/java/org/todo/app/H2Db.java](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/app/H2Db.java)
 
 ## **References**

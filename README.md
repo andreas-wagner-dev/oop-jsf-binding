@@ -1,13 +1,15 @@
 # 🧶 OOP-JSF-Binding
 
-Demonstrating **Object-Oriented Programming (OOP) principles** where objects controls their own persistence and display logic within a Java web application using Jakarta EE and PrimeFaces.
+> Demonstrating **Object-Oriented Programming (OOP) principles** where objects controls their own persistence and display logic within a Java web application using Jakarta EE and PrimeFaces.
 
 ## Overview
 
-* The application manages **Tasks** and **Folders** in a hierarchical structure and showcases how **UI components can be directly bound to domain objects**.
-* The application can be started as a *WAR* on a Jakarta EE compliant server (e.g., WildFly, Payara) or locally as a *JAR* (with embedded WildFly), using an H2 in-memory database.
+The application manages **Tasks** and **Folders** in a hierarchical structure and showcases how **UI components can be directly bound to domain objects**.
 
 ## Quick Start
+
+The application can be started as a *WAR* on a Jakarta EE compliant server (e.g., WildFly, Payara) or locally as a *JAR* (with embedded WildFly), using an H2 in-memory database.
+
 **Required:** Java 11+
 1. run in cmd: ``mvn package`` - standalone application - as executable **.jar**
 * or optional: ``mvn install`` - jee server application - as deployable  **.war** 
@@ -24,8 +26,8 @@ The application adheres to classic OOP principles:
 
 ## **Components**
 
-* **Application:** The root Composition of all implementations in the package ``app/``: Startup, DI and Properties.  
-* **Domain:** The main interfaces in the root namaspace (package) ``todo/`` and their implementations for tasks ``task/`` and folders ``folder/`.
+* **Application:** The root Composition of all implementations in the package ``app/`` contains Startup, Dependency-Injection and Properties. 
+* **Domain:** The main interfaces in the namaspace (package) ``todo/`` and their implementations for tasks ``task/`` and folders ``folder/``.
 * **Persistence:** The class [org.todo.app.H2Db](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/app/H2Db.java) initializes the database and provides test data.  
 * **Presentation:** *Managed Beans* like [org.todo.task.TaskForm](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/task/TaskForm.java) bind UI components directly to the domain objects.  
 * **Webservice:** REST API endpoints such as [org.todo.task.TaskResource](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/task/TaskResource.java) allow access to tasks as JSON resources.

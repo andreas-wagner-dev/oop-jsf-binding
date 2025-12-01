@@ -1,4 +1,4 @@
-# OOP-Jsf-Binding
+# 🧶 OOP-JSF-Binding
 
 Demonstrating **Object-Oriented Programming (OOP) principles** where objects controls their own persistence and display logic within a Java web application using Jakarta EE and PrimeFaces.
 
@@ -39,8 +39,7 @@ The application demonstrates how JSF components can be connected directly to the
 ## **Exemplary OOP Implementation**
 
 * Tasks and folders are modeled as objects that control their own persistence and display logic.  
-* The UI components are updated directly by the objects themselves.  
-* E.g., through methods like `displayTo(Tree tree)` or `displayTasksTo(DataTable table)`.
+* The UI components are updated directly by the objects themselves, through methods like `displayTo(Tree tree)` or `displayTasksTo(DataTable table)`.
 
 ## **Project Links**
 * [src/main/java/org/todo/Task.java](https://github.com/andreas-wagner-dev/oop-jsf-binding/blob/main/src/main/java/org/todo/Task.java)  
